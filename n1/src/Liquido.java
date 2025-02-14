@@ -3,11 +3,11 @@ import javax.swing.*;
 import java.text.DecimalFormat;
 
 public class Liquido {
-    public static float CalcularSalarioBruto(int hora, float valorHora){
+    public static float calcularSalarioBruto(int hora, float valorHora){
         return hora * valorHora;
     }
 
-    public static void CalcularSalarioLiquido(float salario, int dp, float desconto){
+    public static void calcularSalarioLiquido(float salario, int dp, float desconto){
         float liquido = salario - (salario * desconto) + (dp * 100);
         DecimalFormat df = new DecimalFormat();
 
@@ -22,7 +22,7 @@ public class Liquido {
 
         desconto = desconto / 100; //Para calcular como porcentagem
 
-        float salario = CalcularSalarioBruto(hora, valorHora);
-        CalcularSalarioLiquido(salario, dp, desconto);
+        float salario = calcularSalarioBruto(hora, valorHora);
+        calcularSalarioLiquido(salario, dp, desconto);
     }
 }
