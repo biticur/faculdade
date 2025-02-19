@@ -10,7 +10,7 @@ public class SomatoriaImpar {
 		} else if(menor % 2 != 0) {
 			somatoria(maior, menor + 2, soma += menor);
 		} else {
-			somatoria(maior, menor + 1, soma = 0);
+			somatoria(maior, menor + 1, soma);
 		}
 	}
 	
