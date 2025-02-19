@@ -6,7 +6,7 @@ public class QuadradosRecursiva {
 	public static void Quadrados(int num) {
 		DecimalFormat df = new DecimalFormat("0");
 		if(num <= 150) {
-			System.out.println("Quadrado de " + num + ": " + (Math.pow(num, 2)));
+			System.out.println("Quadrado de " + num + ": " + df.format(Math.pow(num, 2)));
 			Quadrados(num + 1);
 		} else {
 			return;

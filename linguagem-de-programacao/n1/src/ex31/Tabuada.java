@@ -15,7 +15,7 @@ public class Tabuada {
 	public static void main(String[] args) {
 		int num = Integer.parseInt(JOptionPane.showInputDialog("Digite um número"));
 		int multiplicador = 1;
-		System.out.println("Tabuada\n==============");
+		System.out.println("Tabuada\n=============");
 		calcularTabuada(num, multiplicador);
 	}
 
