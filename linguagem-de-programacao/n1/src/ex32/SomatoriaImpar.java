@@ -3,14 +3,14 @@ package ex32;
 import javax.swing.JOptionPane;
 
 public class SomatoriaImpar {
-	public static void somatoria(int maior, int menor, int impar) {
-		if(menor >= maior) {
+	public static void somatoria(int maior, int menor, int soma) {
+		if(menor > maior) {
+			System.out.println(soma);
 			return;
-		} else if(menor % 2 == 0){
-			somatoria(maior, menor + 1, impar = 0);
+		} else if(menor % 2 != 0) {
+			somatoria(maior, menor + 2, soma += menor);
 		} else {
-			System.out.println(impar);
-			somatoria(maior, menor + 2, impar + menor);
+			somatoria(maior, menor + 1, soma = 0);
 		}
 	}
 	
@@ -19,9 +19,9 @@ public class SomatoriaImpar {
 		int y = Integer.parseInt(JOptionPane.showInputDialog("Digite mais um número"));
 		int maior = Math.max(x, y);
 		int menor = Math.min(x, y);
-		int impar = menor;
+		int soma = 0;
 		
-		somatoria(maior, menor, impar); 
+		somatoria(maior, menor, soma); 
 	}
 
 }
