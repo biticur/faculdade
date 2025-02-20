@@ -30,11 +30,11 @@ public class VetorReal {
 		System.out.println("Quantidade de notas acima da média: " + acima);
 	}
 	
-	public static void posicoesAbaixo(double[] vetor, double media, int length) {
+	public static void posicoesAbaixo(double[] vetor, double media) {
 		System.out.println();
 		System.out.println("Posições de notas abaixo da média:");
 		
-		for(int i = 0; i < length; i++) {
+		for(int i = 0; i < vetor.length; i++) {
 			if(vetor[i] < media) {
 				System.out.println("[" + i + "]");
 			}
@@ -43,16 +43,15 @@ public class VetorReal {
 	
 	public static void main(String[] args) {
 		double[] vetor = new double[5];
-		int length = vetor.length;
 		
-		for(int i = 0; i < length; i++) {
+		for(int i = 0; i < vetor.length; i++) {
 			vetor[i] = Double.parseDouble(JOptionPane.showInputDialog("Digite o valor da posição [" + i + "]"));
 		}
 		
 		double media = calcularMedia(vetor);
 		
 		notasAcima(vetor, media);
-		posicoesAbaixo(vetor, media, length);
+		posicoesAbaixo(vetor, media);
 	}
 
 }
