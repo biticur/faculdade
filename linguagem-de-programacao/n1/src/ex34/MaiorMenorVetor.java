@@ -8,7 +8,7 @@ public class MaiorMenorVetor {
 		int menor = vetor[0];
 		
 		for(int num: vetor) {
-			if(num> maior) {
+			if(num > maior) {
 				maior = num;
 			} else if (num < menor) {
 				menor = num;
@@ -31,9 +31,8 @@ public class MaiorMenorVetor {
 	
 	public static void main(String[] args) {
 		int[] vetor = new int[5];
-		int length = vetor.length;
 		
-		for(int i = 0; i < length; i++) {
+		for(int i = 0; i < vetor.length; i++) {
 			vetor[i] = Integer.parseInt(JOptionPane.showInputDialog("Digite o valor do índice [" + i + "]"));
 		}
 		
