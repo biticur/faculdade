@@ -14,12 +14,6 @@ public class Ordenacao {
 			}
 		}
 		
-		System.out.println("Vetor ordenado:");
-		
-		for(int num: vetor) {
-			System.out.println("[" + num + "]");
-		}
-		
 	}
 	
 	public static void main(String[] args) {
@@ -31,6 +25,12 @@ public class Ordenacao {
 		}
 		
 		bubblesort(vetor);
+		
+		System.out.println("Vetor ordenado:");
+		
+		for(int num: vetor) {
+			System.out.println("[" + num + "]");
+		}
 	}
 
 }

@@ -3,7 +3,7 @@ package ex23;
 import javax.swing.JOptionPane;
 
 public class Ordenacao {
-	public static void reordenar(int a, int b, int c, int d) {
+	public static void exibirOrdenado(int a, int b, int c, int d) {
 		if(d > c) {
 			JOptionPane.showMessageDialog(null, "Em ordem crescente: " + a + ", " + b + ", " + c + ", " + d);
 		} else if(d > b && d < c) {
@@ -34,7 +34,7 @@ public class Ordenacao {
 		
 		int d = Integer.parseInt(JOptionPane.showInputDialog("Agora digite um número aleatório"));
 		
-		reordenar(a, b, c, d);
+		exibirOrdenado(a, b, c, d);
 	}
 
 }

@@ -21,6 +21,7 @@ public class EquacaoReal {
 		
 		if(delta < 0) {
 			JOptionPane.showMessageDialog(null, "A equação não possui raízes reais");
+			System.exit(0);
 		}
 		
 		calcularRaizes(a, b, delta);

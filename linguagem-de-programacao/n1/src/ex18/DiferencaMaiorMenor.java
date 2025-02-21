@@ -3,7 +3,7 @@ package ex18;
 import javax.swing.JOptionPane;
 
 public class DiferencaMaiorMenor {
-	public static void troca(int x, int y) {
+	public static void exibirTroca(int x, int y) {
 		if(x >= y) {
 			JOptionPane.showMessageDialog(null, "Diferença do maior pelo menor: " + (x - y));
 		} else {
@@ -15,7 +15,7 @@ public class DiferencaMaiorMenor {
 		int x = Integer.parseInt(JOptionPane.showInputDialog("Digite um número"));
 		int y = Integer.parseInt(JOptionPane.showInputDialog("Digite mais um número"));
 		
-		troca(x, y);
+		exibirTroca(x, y);
 	}
 
 }

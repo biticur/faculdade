@@ -3,7 +3,7 @@ package ex19;
 import javax.swing.JOptionPane;
 
 public class Maior {
-	public static void mostrarMaior(double x, double y) {
+	public static void exibirMaior(double x, double y) {
 		if(x > y) {
 			JOptionPane.showMessageDialog(null, "O primeiro número é o maior (" + x + ")");
 		} else if(x < y) {
@@ -17,7 +17,7 @@ public class Maior {
 		double x = Double.parseDouble(JOptionPane.showInputDialog("Digite um número"));
 		double y = Double.parseDouble(JOptionPane.showInputDialog("Digite mais um número"));
 		
-		mostrarMaior(x, y);
+		exibirMaior(x, y);
 	}
 
 }

@@ -9,10 +9,8 @@ public class SalarioLiquido {
 		return horas * valorHora;
 	}
 	
-	public static void calcularSalarioLiquido(double bruto, double desconto, int dp) {
-		DecimalFormat df = new DecimalFormat("0.00");
-		
-		JOptionPane.showMessageDialog(null, "Salário: R$" + df.format(bruto - (bruto * desconto) + dp));
+	public static double calcularSalarioLiquido(double bruto, double desconto, int dp) {
+		return bruto - (bruto * desconto) + dp;
 	}
 	
 	public static void main(String[] args) {
@@ -21,8 +19,11 @@ public class SalarioLiquido {
 		double desconto = Double.parseDouble(JOptionPane.showInputDialog("Digite o percentual de desconto")) / 100;
 		int dp = Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade de dependentes")) * 100;
 		double bruto = calcularSalarioBruto(horas, valorHora);
+		DecimalFormat df = new DecimalFormat("0.00");
 		
-		calcularSalarioLiquido(bruto, desconto, dp);
+		double liquido = calcularSalarioLiquido(bruto, desconto, dp);
+	
+		JOptionPane.showMessageDialog(null, "Salário líquido: R$" + liquido);
 	}
 
 }

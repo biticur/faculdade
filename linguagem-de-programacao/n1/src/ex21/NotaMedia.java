@@ -5,9 +5,13 @@ import java.text.DecimalFormat;
 import javax.swing.JOptionPane;
 
 public class NotaMedia {
-	public static void mediaAritmetica(double n1, double n2, double n3, double n4) {
-		double media = (n1 + n2 + n3 + n4) / 4;
-		DecimalFormat df = new DecimalFormat("0.0");
+	public static double calcularMediaAritmetica(double n1, double n2, double n3, double n4) {
+		return (n1 + n2 + n3 + n4) / 4; 
+	}
+	
+	public static void classificarEMostrarResultado(double media) {
+		DecimalFormat df = new DecimalFormat("0.00");
+		
 		if(media >= 6) {
 			JOptionPane.showMessageDialog(null, "MÉDIA: " + df.format(media) + "\nSITUAÇÃO: APROVADO");
 		} else if (media >= 3) {
@@ -23,7 +27,8 @@ public class NotaMedia {
 		double n3 = Double.parseDouble(JOptionPane.showInputDialog("Digite a 3a nota"));
 		double n4 = Double.parseDouble(JOptionPane.showInputDialog("Digite a 4a nota"));
 		
-		mediaAritmetica(n1, n2, n3, n4);
+		double media = calcularMediaAritmetica(n1, n2, n3, n4);
+		classificarEMostrarResultado(media);
 	}
 
 }
