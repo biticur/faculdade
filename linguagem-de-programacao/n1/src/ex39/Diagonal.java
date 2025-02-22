@@ -8,17 +8,7 @@ public class Diagonal {
 		
 		for(int x = 0; x < matriz.length; x++) {
 			for(int y = 0; y < matriz.length; y++) {
-				matriz[x][y] = (x != y) ? random.nextInt(100) : 0;
-			}
-		}
-	}
-	
-	public static void preencherDiagonal(int[][] matriz) {
-		for(int x = 0; x < matriz.length; x++) {
-			for(int y = 0; y < matriz.length; y++) {
-				if(x == y) {
-					matriz[x][y] = (int) Math.pow(4, y);
-				}
+				matriz[x][y] = (x == y) ? (int) Math.pow(4, y) : random.nextInt(100);
 			}
 		}
 	}
@@ -27,7 +17,6 @@ public class Diagonal {
 		int[][] matriz = new int [4][4];
 		
 		preencherMatriz(matriz);
-		preencherDiagonal(matriz);
 		
 		for(int[] linha: matriz) {
 			for(int num: linha) {
