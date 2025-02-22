@@ -23,7 +23,7 @@ public class SalarioLiquido {
 		
 		double liquido = calcularSalarioLiquido(bruto, desconto, dp);
 	
-		JOptionPane.showMessageDialog(null, "Salário líquido: R$" + liquido);
+		JOptionPane.showMessageDialog(null, "Salário líquido: R$" + df.format(liquido));
 	}
 
 }
